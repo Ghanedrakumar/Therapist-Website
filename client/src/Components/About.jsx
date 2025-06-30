@@ -1,39 +1,4 @@
-// import React from 'react'
-
-// const About = () => {
-//     return (
-//         <div className='bg-green-100 h-fit'>
-//             <div className=''>
-//                 <div className='container flex col justify-center gap-10 mt-10 mb-10'>
-//                    <div>
-//                     <img src="https://img.notionusercontent.com/s3/prod-files-secure%2Fe434db5d-d615-814a-b090-0003034cd63a%2Ffcdeffc3-7fce-4ca7-a4ea-a0888f182399%2Fimage.png/size/w=2000?exp=1751365598&sig=5wDif2vYauprzdkV0yhQWxdq-OBftXGz4JGfg3GmLUY&id=21f4db5d-d615-8076-8a1c-fd184ea4e5df&table=block" alt="" className='h-96 w-64 p-10' />
-//                     </div> 
-
-//                     <div>
-//                         <p className='  bg-amber-100 rounded-md p-2'>About Ellie Shumaker, LCSW - Experienced Christian Therapist in Richmond, VA</p>
-//                         <h1 className='text-5xl font-bold '>Hi I'm  Ellie Shumaker</h1>
-//                         <p className='word-wrap break-words text-justify mt-4'>
-//                             Ellie Shumaker is a licensed clinical psychologist (PsyD) based in Los Angeles, CA, with eight years of experience and over 500 client sessions. She blends evidence-based approaches—like cognitive-behavioral therapy and mindfulness—with compassionate, personalized care to help you overcome anxiety, strengthen relationships, and heal from trauma. Whether you meet in her Maplewood Drive office or connect virtually via Zoom, Dr. Blake is committed to creating a safe, supportive space for you to thrive.
-//                         </p>
-
-//                     </div>
-//                 </div>
-
-
-//             </div>
-//         </div>
-//     )
-// }
-
-// export default About
-
-
-
-
-
-
 import React from 'react';
-
 const About = () => {
     return (
         <div className="bg-green-100 py-10">

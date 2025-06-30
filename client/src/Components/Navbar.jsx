@@ -3,7 +3,7 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 function Navbar() {
     return (
-        <nav className=" p-4 bg-white shadow-md flex sticky top-0 z-50">
+        <nav className=" p-4 bg-slate-100 shadow-md flex sticky top-0 z-50">
 
             <ul className="flex items-center">
                 <li>
