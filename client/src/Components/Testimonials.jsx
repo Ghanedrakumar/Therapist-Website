@@ -6,7 +6,7 @@ const Testimonials = () => {
 
             <div>
                 <p className="bg-amber-100 rounded-md p-2 text-sm font-medium mb-4 w-fit">
-                    Client Success Story & Testimonial
+                    Client Success Story & Testimonials
                 </p>
                 <h1 className="text-4xl font-bold mb-4">What Farmer Clients Say</h1>
                 <p className='text-2xl p-3'>
