@@ -1,11 +1,24 @@
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./Components/Navbar";
+import Dashboard from "./Components/Dashboard";
+import About from "./Components/About";
+import Service from "./Components/Service";
+import Ratefacts from "./Components/Ratefacts";
 
 function App() {
   return (
-    <>
-      <h1>Welcome to the Therapist Website</h1>
-      <p>Your journey to mental wellness starts here.</p>
-    </>
-  )
+    <Router>
+      <Navbar />
+      <Routes>
+     <Route path="/" element={<Dashboard />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/service" element={<Service />} />
+      <Route path="/contact" element={<Ratefacts />} />
+      <Route path="/rates-faqs" element={<Ratefacts />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
