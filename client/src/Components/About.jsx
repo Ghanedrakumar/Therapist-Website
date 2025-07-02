@@ -1,8 +1,8 @@
 import React from 'react';
 const About = () => {
     return (
-        <div className="bg-green-100 py-10">
-            <div className="container mx-auto px-4">
+        <div className="bg-blue-100 py-10">
+            <div className=" mx-auto px-4">
                 <div className="flex flex-col md:flex-row items-center justify-center gap-10">
 
                     {/* Left Side: Image */}

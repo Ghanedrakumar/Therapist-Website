@@ -4,6 +4,7 @@ import Navbar from "./Components/Navbar";
 import Dashboard from "./Components/Dashboard";
 import About from "./Components/About";
 import Service from "./Components/Service";
+import Testimonials from "./Components/Testimonials";
 import Ratefacts from "./Components/Ratefacts";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Route path="/service" element={<Service />} />
       <Route path="/contact" element={<Ratefacts />} />
       <Route path="/rates-faqs" element={<Ratefacts />} />
+      <Route path="/testimonials" element={<Testimonials />} />
       </Routes>
     </Router>
   );

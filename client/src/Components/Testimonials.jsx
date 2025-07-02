@@ -2,7 +2,7 @@ import React from 'react'
 
 const Testimonials = () => {
     return (
-        <div className='bg-green-100 p-20'>
+        <div className='bg-blue-200 p-20'>
 
             <div>
                 <p className="bg-amber-100 rounded-md p-2 text-sm font-medium mb-4 w-fit">
@@ -17,7 +17,7 @@ const Testimonials = () => {
             <div className="space-y-4 flex flex-wrap justify-center items-center gap-4">
 
 
-                <div className="w-96 h-48 bg-slate-100 text-black border-2 border-black p-4 rounded-md shadow-md flex flex-col justify-center items-center">
+                <div className="w-96 h-48 bg-gray-300 text-black border-2 border-black p-4 rounded-md shadow-md flex flex-col justify-center items-center">
                     <h1>Happy Client</h1>
                     <div>
 
@@ -25,7 +25,7 @@ const Testimonials = () => {
                     </div>
                 </div>
 
-                <div className="w-96 h-48 bg-slate-100 text-black border-2 border-black p-4 rounded-md shadow-md flex flex-col justify-center items-center">
+                <div className="w-96 h-48 bg-gray-300 text-black border-2 border-black p-4 rounded-md shadow-md flex flex-col justify-center items-center">
                     <h1>Happy Client</h1>
                     <div>
 
@@ -33,7 +33,7 @@ const Testimonials = () => {
                     </div>
                 </div>
 
-                <div className="w-96 h-48 bg-slate-100 text-black border-2 border-black p-4 rounded-md shadow-md flex flex-col justify-center items-center">
+                <div className="w-96 h-48 bg-gray-300 text-black border-2 border-black p-4 rounded-md shadow-md flex flex-col justify-center items-center">
                     <h1>Happy Client</h1>
                     <div>
 
