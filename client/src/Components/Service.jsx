@@ -15,7 +15,11 @@ const services = [
 
 const Service = () => {
   return (
+    <div>
     <div className="bg-green-100 py-20 px-6 lg:px-20 ">
+      <div className="pb-5 cursor-pointer text-2xl font-bold text-blue-600">
+      <a href="/"><button className="cursor-pointer">Home</button></a>
+      </div>
       <h2 className="text-4xl font-bold mb-10">How I Help</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {services.map((service, index) => (
@@ -38,7 +42,13 @@ const Service = () => {
           </div>
         ))}
       </div>
+      
     </div>
+    <footer className='bg-yellow-100 p-10 text-center'>
+        <p className='text-sm'>© 2023 Ellie Shumaker, LCSW. All rights reserved.</p>
+        <p className='text-sm'>Privacy Policy | Terms of Service</p>
+      </footer>
+      </div>
   );
 };
 

@@ -2,22 +2,18 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import Dashboard from "./Components/Dashboard";
-import About from "./Components/About";
 import Service from "./Components/Service";
-import Testimonials from "./Components/Testimonials";
-import Ratefacts from "./Components/Ratefacts";
-
+import Consultation from "./Components/Consultation";
+import Contact from "./Components/Contact";
 function App() {
   return (
     <Router>
       <Navbar />
       <Routes>
      <Route path="/" element={<Dashboard />} />
-      <Route path="/about" element={<About />} />
       <Route path="/service" element={<Service />} />
-      <Route path="/contact" element={<Ratefacts />} />
-      <Route path="/rates-faqs" element={<Ratefacts />} />
-      <Route path="/testimonials" element={<Testimonials />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/consultation" element={<Consultation />} />
       </Routes>
     </Router>
   );

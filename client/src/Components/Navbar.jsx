@@ -1,6 +1,7 @@
 // components/Navbar.js
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import {  NavLink } from "react-router-dom";
+import { Link } from "react-scroll";
 function Navbar() {
     return (
         <nav className=" p-4 bg-slate-100 shadow-md flex sticky top-0 z-50  wrap-break-word overflow-hidden">
@@ -15,24 +16,29 @@ function Navbar() {
             <div className="flex-grow flex items-center justify-center">
 
             <ul className=" flex ">
-                <li className=" ">
+                <li className="cursor-pointer ">
                     <NavLink to="/service"  smooth={true} duration={500} end className="text-blue-500 hover:text-blue-700 text-1xl font-bold ml-25 ">
                         Services
                     </NavLink>
                 </li>
-                <li className=" ">
-                    <NavLink to="/testimonials"  smooth={true} duration={500} end className="text-blue-500 hover:text-blue-700 text-1xl font-bold ml-25 ">
+                <li className="cursor-pointer ">
+                    <Link to="testimonials"  smooth={true} duration={500} end className="text-blue-500 hover:text-blue-700 text-1xl font-bold ml-25 ">
                         Testimonials
-                    </NavLink>
+                    </Link>
                 </li>
-                <li className="">
-                    <NavLink to="/about" smooth={true} duration={500} className="text-blue-500 hover:text-blue-700 text-1xl font-bold ml-25">
+                <li className="cursor-pointer">
+                    <Link to="about" smooth={true} duration={500} className="text-blue-500 hover:text-blue-700 text-1xl font-bold ml-25">
                         About
-                    </NavLink>
+                    </Link>
+                </li>
+                <li className="cursor-pointer">
+                    <Link to="ratefacts" smooth={true} duration={500} className="text-blue-500 hover:text-blue-700 text-1xl font-bold ml-25">
+                        Rates & FAQs
+                    </Link>
                 </li>
                 <li className="">
                     <NavLink to="/contact" smooth={true} duration={500} className="text-blue-500 hover:text-blue-700 text-1xl font-bold ml-25">
-                        Rates & FAQs
+                      Contact
                     </NavLink>
                 </li>
 

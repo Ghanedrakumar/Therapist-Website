@@ -2,16 +2,28 @@ import React, { useState } from 'react';
 
 const faqs = [
   {
-    question: "What is your counseling approach?",
-    answer: "We offer faith-based, professional counseling grounded in Christian values."
+    question: "What are your fees?",
+    answer: "My fees are $60 for individual, $90 for couple"
   },
   {
-    question: "Do I need a referral?",
-    answer: "No referral is needed. You can directly book an appointment with us."
+    question: "Do you take insurance?",
+    answer: "No, I do not take insurance directly. However, I can provide you with a billing sheet with the necessary facts and codes so you can file for out-of-network benefits with your insurance company."
   },
   {
-    question: "Is everything confidential?",
-    answer: "Yes, all sessions are strictly confidential as per legal and ethical guidelines."
+    question: "Do you provide online counseling?",
+    answer: "No, I do not provide online counseling."
+  },
+  {
+    question: "What are your office hours?",
+    answer: "My office hours are Monday through Thursday, 11:00 AM to 6:30 PM."
+  },
+  {
+    question: "What geographic areas do you serve?",
+    answer: "My practice is located in Richmond, VA, and I serve clients in Central Virginia."
+  },
+  {
+    question: "What services do you offer?",
+    answer: "I offer Individual Therapy and Couples Therapy. My practice focuses on areas such as Christian counseling, spiritual growth, deepening relationships, healing past wounds, and discovering your life's purpose."
   }
 ];
 
@@ -23,7 +35,7 @@ const Ratefacts = () => {
   };
 
   return (
-    <div className="w-full h-screen  px-10 py-8 bg-blue-100">
+    <div className="w-full h-screen  px-10 py-2 pb-10 bg-blue-100" id='ratefacts'>
       <h2 className="text-4xl font-bold text-center mb-20  wrap-word pt-25">Frequently Asked Questions</h2>
       <div className="space-y-10">
         {faqs.map((faq, index) => {

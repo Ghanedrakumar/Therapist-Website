@@ -1,7 +1,9 @@
 import React from 'react';
 const About = () => {
     return (
-        <div className="bg-blue-100 py-10">
+        <div className="bg-blue-100 py-10" id='about'>
+        
+         
             <div className=" mx-auto px-4">
                 <div className="flex flex-col md:flex-row items-center justify-center gap-10">
 
@@ -56,11 +58,8 @@ const About = () => {
                         <img src="https://main.d1hiqvipguwtuq.amplifyapp.com/_next/static/media/Therapist.com-logo.43d1c2a1.svg" alt="" className='h-12 w-36' />
                     </a>
                 </div>
-
-
-
-
             </div>
+
         </div>
     );
 };
