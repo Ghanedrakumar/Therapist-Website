@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cors({ origin: "http://localhost:5173" }));
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
-mongoose.connect('mongodb://localhost:27017/therapist_website').then(() => {
+mongoose.connect('mongodb+srv://ghanendra750594:8eUmUI4lPffqSAt6@cluster0.pgu9og6.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0').then(() => {
   console.log('Connected to MongoDB')
 }).catch(err => {
   console.error('Error connecting to MongoDB', err)
