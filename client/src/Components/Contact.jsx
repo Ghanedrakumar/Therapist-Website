@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -15,17 +14,19 @@ const Contact = () => {
       [e.target.name]: e.target.value,
     }));
   };
-  
-const handleSubmit = async (e) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:3000/api/contact", {
+      const response = await fetch("http://localhost:3000/contact/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
+
+      console.log("Response status:", response.status);
 
       if (!response.ok) {
         throw new Error("Network response was not ok");
@@ -34,6 +35,7 @@ const handleSubmit = async (e) => {
       const data = await response.json();
       console.log("Form submitted successfully:", data);
       alert("Form submitted successfully!");
+
       setFormData({
         name: "",
         email: "",
@@ -44,27 +46,16 @@ const handleSubmit = async (e) => {
       console.error("Error submitting form:", error);
       alert("There was an error submitting the form. Please try again later.");
     }
-  
-
   };
 
-
   return (
-    <div>
-    
     <div className="min-h-screen flex items-center gap-8 justify-center bg-gradient-to-r from-purple-100 to-blue-300 p-4">
-        
-      <motion.div
-        className="bg-white rounded-3xl shadow-2xl w-full max-w-2xl p-8"
-        initial={{ opacity: 0, y: 80 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, ease: "easeOut" }}
-      >
+      <div className="bg-white rounded-3xl shadow-2xl w-full max-w-2xl p-8">
         <h2 className="text-3xl font-bold text-blue-700 text-center mb-6">
           Get In Touch
         </h2>
         <p className="text-center text-gray-500 mb-8">
-         Simply fill out the brief fields below and Ellie will be in touch with you soon, usually within one business day. This form is safe, private, and completely free.
+          Simply fill out the brief fields below and Ellie will be in touch with you soon, usually within one business day. This form is safe, private, and completely free.
         </p>
         <form onSubmit={handleSubmit} className="space-y-5">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -106,23 +97,16 @@ const handleSubmit = async (e) => {
             required
           ></textarea>
 
-          {/* Uncomment if you're using Google reCAPTCHA */}
-          {/* <ReCAPTCHA sitekey="YOUR_SITE_KEY" onChange={handleCaptchaChange} /> */}
-
-          <motion.button
+          <button
             type="submit"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.97 }}
-            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-xl shadow-lg transition"
-            onClick={handleSubmit()}
+            disabled={!formData.name || !formData.email || !formData.message}
+            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-xl shadow-lg transition disabled:opacity-50"
           >
             Submit
-          </motion.button>
+          </button>
         </form>
-      </motion.div>
-      
+      </div>
     </div>
-       </div>
   );
 };
 

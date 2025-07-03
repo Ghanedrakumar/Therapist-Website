@@ -1,8 +1,17 @@
 import express from 'express'
 import mongoose from 'mongoose'
-import ContactDetailsRouter from './Routes/ContactDetails.js' // Adjust the path as necessary
+
+// import ContactDetailsRouter from './Routes/ContactDetails.js' 
+import bodyParser from 'body-parser'
+import ContactDetailsRouter from '../Routes/ContactDetails.js' // Ensure this path is correct
+import cors from 'cors'
 const app = express()
 const port = 3000
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(cors({ origin: "http://localhost:5173" }));
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
 mongoose.connect('mongodb://localhost:27017/therapist_website').then(() => {
   console.log('Connected to MongoDB')
 }).catch(err => {
@@ -11,7 +20,9 @@ mongoose.connect('mongodb://localhost:27017/therapist_website').then(() => {
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
-app.use('/api/contact', ContactDetailsRouter)
+
+app.use('/contact',ContactDetailsRouter) // Ensure ContactDetailsRouter is imported correctly
+// app.use('/api/contact', ContactDetailsRouter)
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })

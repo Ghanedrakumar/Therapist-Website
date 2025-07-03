@@ -44,10 +44,6 @@ const Service = () => {
       </div>
       
     </div>
-    <footer className='bg-yellow-100 p-10 text-center'>
-        <p className='text-sm'>© 2023 Ellie Shumaker, LCSW. All rights reserved.</p>
-        <p className='text-sm'>Privacy Policy | Terms of Service</p>
-      </footer>
       </div>
   );
 };
