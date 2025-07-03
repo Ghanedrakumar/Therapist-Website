@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import About from './About';
 import Testimonial from './Testimonials';
-
+import { toast } from "react-toastify"
 const apiKey = import.meta.env.VITE_API_BASE_URL;
 
 const Consultation = () => {
@@ -33,7 +33,7 @@ const Consultation = () => {
 
       const data = await response.json();
       console.log('Form submitted successfully:', data);
-      alert('Form submitted successfully!');
+      toast.success('Form submitted successfully!');
 
       setFormData({
         name: '',
@@ -43,6 +43,7 @@ const Consultation = () => {
       });
     } catch (error) {
       console.error('Error submitting form:', error);
+      toast.error("There was an error submitting the form. Please try again later.");
     }
   };
 

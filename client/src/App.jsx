@@ -5,6 +5,7 @@ import Dashboard from "./Components/Dashboard";
 import Service from "./Components/Service";
 import Consultation from "./Components/Consultation";
 import Contact from "./Components/Contact";
+import { ToastContainer } from "react-toastify"
 function App() {
   return (
     <Router>
@@ -15,6 +16,7 @@ function App() {
       <Route path="/contact" element={<Contact />} />
       <Route path="/consultation" element={<Consultation />} />
       </Routes>
+       <ToastContainer position="top-center" />
     </Router>
   );
 }
