@@ -90,7 +90,7 @@ const Dashboard = () => {
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-6">
                 <a href="/consultation">
-                  <button className="w-fit rounded-xl text-blue-600 text-lg sm:text-2xl font-bold bg-slate-100 px-6 py-3 hover:bg-blue-900 hover:text-white transition">
+                  <button className="cursor-pointer w-fit rounded-xl text-blue-600 text-lg sm:text-2xl font-bold bg-slate-100 px-6 py-3 hover:bg-blue-900 hover:text-white transition">
                     Start Healing Today
                   </button>
                 </a>
