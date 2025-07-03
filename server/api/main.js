@@ -4,14 +4,16 @@ import bodyParser from 'body-parser'
 import ContactDetailsRouter from '../Routes/ContactDetails.js'
 import ConsultationDetailsRouter from '../Routes/ConsultationDetails.js'
 import cors from 'cors'
+import dotenv from 'dotenv'
+dotenv.config()
 const app = express()
-const port = 3000
+const port = process.env.PORT || 3000
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
-app.use(cors({ origin: "http://localhost:5173" }));
+app.use(cors());
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
-mongoose.connect('mongodb+srv://ghanendra750594:8eUmUI4lPffqSAt6@cluster0.pgu9og6.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0').then(() => {
+mongoose.connect(process.env.CONNECTION_DBB).then(() => {
   console.log('Connected to MongoDB')
 }).catch(err => {
   console.error('Error connecting to MongoDB', err)
