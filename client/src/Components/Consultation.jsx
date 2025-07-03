@@ -3,6 +3,7 @@ import About from './About';
 import Testimonial from './Testimonials';
 
 const apiKey = import.meta.env.VITE_API_BASE_URL;
+
 const Consultation = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -11,7 +12,6 @@ const Consultation = () => {
     message: '',
   });
 
-
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -19,7 +19,7 @@ const Consultation = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response =await fetch(`${apiKey}/consultation/consultation`, {
+      const response = await fetch(`${apiKey}/consultation/consultation`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -31,7 +31,7 @@ const Consultation = () => {
         throw new Error('Network response was not ok');
       }
 
-      const data =await response.json();
+      const data = await response.json();
       console.log('Form submitted successfully:', data);
       alert('Form submitted successfully!');
 
@@ -47,10 +47,16 @@ const Consultation = () => {
   };
 
   return (
-    <div>
-      <div className="flex justify-center items-center min-h-screen bg-purple-100 px-8 gap-10">
-        <About />
-        <div className="bg-white p-8 rounded-2xl shadow-lg max-w-md w-full">
+    <div className="w-full">
+      {/* Responsive Wrapper */}
+      <div className="flex flex-col-reverse lg:flex-row justify-center items-center min-h-screen bg-purple-100 px-4 sm:px-6 lg:px-12 py-10 gap-10">
+        {/* About Section */}
+        <div className="w-full lg:w-1/2">
+          <About />
+        </div>
+
+        {/* Consultation Form */}
+        <div className="w-full lg:w-1/2 bg-white p-6 sm:p-8 rounded-2xl shadow-lg">
           <h2 className="text-2xl font-semibold mb-6 text-center text-gray-800">
             Free Consultation
           </h2>
@@ -101,24 +107,23 @@ const Consultation = () => {
             </button>
           </form>
         </div>
-
       </div>
+
+      {/* Testimonials */}
       <Testimonial />
 
-      <div className='bg-blue-100 p-10'>
-        <div className='text-center'>
-          <h2 className='text-3xl font-bold'>Get Started Today</h2>
-          <p className='mt-2'>Take the first step towards healing and growth.</p>
-        </div>
+      {/* Get Started Section */}
+      <div className="bg-blue-100 py-10 px-4 text-center">
+        <h2 className="text-2xl sm:text-3xl font-bold">Get Started Today</h2>
+        <p className="mt-2 text-sm sm:text-base">Take the first step towards healing and growth.</p>
       </div>
 
-      <footer className='bg-blue-200 p-10 text-center'>
-        <p className='text-sm'>© 2023 Ellie Shumaker, LCSW. All rights reserved.</p>
-        <p className='text-sm'>Privacy Policy | Terms of Service</p>
+      {/* Footer */}
+      <footer className="bg-blue-200 p-4 sm:p-6 text-center text-sm">
+        <p>© 2023 Ellie Shumaker, LCSW. All rights reserved.</p>
+        <p>Privacy Policy | Terms of Service</p>
       </footer>
-
     </div>
-
   );
 };
 
