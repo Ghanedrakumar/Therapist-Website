@@ -25,6 +25,7 @@ const Contact = () => {
         },
         body: JSON.stringify(formData),
       });
+      console.log("Sending request to:", `${apiKey}/contact/contact`);
 
       console.log("Response status:", response.status);
 
