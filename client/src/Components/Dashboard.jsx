@@ -58,36 +58,50 @@ const Dashboard = () => {
     <div>
       <main>
 
+        <div className="relative w-full h-[100vh] overflow-hidden">
+          {/* Background Image */}
+          <img
+            src="https://main.d1hiqvipguwtuq.amplifyapp.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero-b.79c9c9cd.jpg&w=1920&q=75"
+            alt="something went wrong"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
 
-        <div className="relative lg:w-full overflow-hidden h-auto">
+          {/* Overlay Content */}
+          <div className="absolute inset-0 bg-black/40 flex items-center justify-center px-4">
+            <div className="text-center text-white space-y-4 max-w-3xl">
+              <p className="text-sm sm:text-base">
+                Christian Counseling Services in Richmond & Central Virginia
+              </p>
+              <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight">
+                Professional Counseling for Christian Healing and Growth
+              </h1>
+              <p className="text-sm sm:text-lg">
+                Begin your journey today towards spiritual growth, deeper relationships, and lasting inner peace.
+              </p>
+              <h2 className="text-lg sm:text-2xl font-bold">I want to work with you for…</h2>
 
-          <img src="https://main.d1hiqvipguwtuq.amplifyapp.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero-b.79c9c9cd.jpg&w=1920&q=75" alt="something went wrong" className="w-full h-auto object-cover opacity-98 " />
-
-          {/* Overlay with centered text */}
-          <div className="absolute inset-0  flex items-center justify-center backdrop-blur-xs ">
-            <div className="text-center text-white space-y-4 px-4 ">
-              <p className="text-base">Christian Counseling Services in Richmond & Central Virginia</p>
-              <h1 className="text-3xl md:text-5xl font-bold">Professional Counseling for Christian Healing and Growth</h1>
-              <p className="text-lg">Begin your journey today towards spiritual growth, deeper relationships, and lasting inner peace.</p>
-              <h1 className="text-2xl font-bold">I want to work with you for…</h1>
               {showFirst ? (
-                <p className="text-purple-200 text-3xl font-bold animate-pulse">Greater Love in Your Relationships</p>
+                <p className="text-purple-200 text-xl sm:text-3xl font-bold animate-pulse">
+                  Greater Love in Your Relationships
+                </p>
               ) : (
-                <p className="text-blue-200 text-3xl font-bold animate-pulse">Greater Peace in Your Heart</p>
+                <p className="text-blue-200 text-xl sm:text-3xl font-bold animate-pulse">
+                  Greater Peace in Your Heart
+                </p>
               )}
 
-              <div className='flex flex-col md:flex-row items-center justify-center gap-4 mt-6'>
-
-                <a href="/consultation"><button className='w-fit rounded-xl text-blue-600 text-2xl flex items-center justify-center font-bold bg-slate-100 p-5  px-10 hover:bg-blue-900 cursor-pointer hover:text-white '>Start Healing Today</button></a>
-
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-6">
+                <a href="/consultation">
+                  <button className="w-fit rounded-xl text-blue-600 text-lg sm:text-2xl font-bold bg-slate-100 px-6 py-3 hover:bg-blue-900 hover:text-white transition">
+                    Start Healing Today
+                  </button>
+                </a>
               </div>
-
-
-
             </div>
           </div>
-
         </div>
+
+
 
         <div className='flex flex-col md:flex-row items-center justify-center gap-50 p-10 bg-green-900'>
 
@@ -114,7 +128,7 @@ const Dashboard = () => {
         <About />
         <Testimonials />
         <Ratefacts />
-        <div  className='flex flex-col md:flex-row items-center justify-center gap-50 p-2 mt-0 bg-blue-100'>
+        <div className='flex flex-col md:flex-row items-center justify-center gap-50 p-2 mt-0 bg-blue-100'>
           <div className='flex flex-col md:flex-col items-center justify-center gap-1 p-2 mt-0'>
             <h1 className=' font-bold text-3xl '>Our  Office</h1>
             <span>4913 Fitzhugh Avenue</span>
@@ -123,12 +137,12 @@ const Dashboard = () => {
             <span>VA 23230</span>
             <span>Richmond, VA</span>
             <a href="https://www.google.com/maps?ll=37.580043,-77.496478&z=16&t=m&hl=en-US&gl=US&mapclient=embed&cid=12712760188681924103"><button className='p-3 rounded-md bg-blue-500 text-white font-bold pl-2 pr-2'>View in Map</button></a>
-          
-           <h1 className=' font-bold text-3xl mt-10 '>Hours</h1>
+
+            <h1 className=' font-bold text-3xl mt-10 '>Hours</h1>
             <span>Monday: 12:00 PM - 8:00 PM</span>
             <span>Tuesday: 12:00 PM - 8:00 PM</span>
             <span>Wednesday: 9:00 AM - 6:00 PM</span>
-          
+
           </div>
           <div className='pt-15'><Contact /></div>
         </div>
