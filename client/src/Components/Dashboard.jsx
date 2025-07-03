@@ -59,14 +59,12 @@ const Dashboard = () => {
       <main>
 
         <div className="relative w-full h-[100vh] overflow-hidden">
-          {/* Background Image */}
           <img
             src="https://main.d1hiqvipguwtuq.amplifyapp.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero-b.79c9c9cd.jpg&w=1920&q=75"
             alt="something went wrong"
             className="absolute inset-0 w-full h-full object-cover"
           />
 
-          {/* Overlay Content */}
           <div className="absolute inset-0 bg-black/40 flex items-center justify-center px-4">
             <div className="text-center text-white space-y-4 max-w-3xl">
               <p className="text-sm sm:text-base">
