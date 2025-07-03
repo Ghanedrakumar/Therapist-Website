@@ -35,16 +35,16 @@ const Ratefacts = () => {
   };
 
   return (
-    <div className="w-full h-screen  px-10 py-2 pb-10 bg-blue-100" id='ratefacts'>
-      <h2 className="text-4xl font-bold text-center mb-20  wrap-word pt-25">Frequently Asked Questions</h2>
-      <div className="space-y-10">
+    <div className="w-full h-screen  px-10 py-2 pb-10 bg-blue-100" id='ratefacts overflow-hidden'>
+      <h2 className="text-4xl font-bold text-center mb-20  wrap-word pt-10">Frequently Asked Questions</h2>
+      <div className="space-y-8">
         {faqs.map((faq, index) => {
           const isOpen = openIndex === index;
           return (
             <div key={index} className="border-b border-gray-300 pb-4">
               <button
                 onClick={() => toggleFAQ(index)}
-                className="md:w-full sm:w-auto flex justify-between items-center text-left text-3xl font-large font-bold text-gray-800 hover:text-blue-600 transition cursor-pointer"
+                className="md:w-full sm:w-auto flex justify-between items-center text-left text-2xl font-large font-bold text-gray-800 hover:text-blue-600 transition cursor-pointer"
               >
                 {faq.question}
                 <span
