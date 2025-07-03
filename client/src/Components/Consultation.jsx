@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import About from './About';
 import Testimonial from './Testimonials';
-
+const apiKey = import.meta.env.VITE_API_BASE_URL;
 const Consultation = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -18,7 +18,7 @@ const Consultation = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response =await fetch("http://localhost:3000/consultation/consultation", {
+      const response =await fetch(`${apiKey}/consultation/consultation`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
