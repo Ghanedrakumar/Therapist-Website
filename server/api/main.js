@@ -1,9 +1,8 @@
 import express from 'express'
 import mongoose from 'mongoose'
-
-// import ContactDetailsRouter from './Routes/ContactDetails.js' 
 import bodyParser from 'body-parser'
-import ContactDetailsRouter from '../Routes/ContactDetails.js' // Ensure this path is correct
+import ContactDetailsRouter from '../Routes/ContactDetails.js'
+import ConsultationDetailsRouter from '../Routes/ConsultationDetails.js'
 import cors from 'cors'
 const app = express()
 const port = 3000
@@ -21,8 +20,8 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-app.use('/contact',ContactDetailsRouter) // Ensure ContactDetailsRouter is imported correctly
-// app.use('/api/contact', ContactDetailsRouter)
+app.use('/contact',ContactDetailsRouter) 
+app.use('/consultation', ConsultationDetailsRouter)
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
