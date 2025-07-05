@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     question: "What services do you offer?",
-    answer: "I offer Individual Therapy and Couples Therapy. My practice focuses on areas such as Christian counseling, spiritual growth, deepening relationships, healing past wounds, and discovering your life's purpose."
+    answer: "I offer Individual Therapy and Couples Therapy."
   }
 ];
 
@@ -35,9 +35,9 @@ const Ratefacts = () => {
   };
 
   return (
-    <div className="w-full h-screen  px-10 py-2 pb-10 bg-blue-100" id='ratefacts overflow-hidden'>
-      <h2 className="text-4xl font-bold text-center mb-20  wrap-word pt-10">Frequently Asked Questions</h2>
-      <div className="space-y-8">
+    <div className="w-full h-screen  px-10 py-2 bg-blue-100" id='ratefacts'overflow-hidden>
+      <h2 className="text-4xl font-bold text-center  wrap-word pt-15">Frequently Asked Questions</h2>
+      <div className="space-y-8 pt-15 md:pt-20 max-w-3xl mx-auto">
         {faqs.map((faq, index) => {
           const isOpen = openIndex === index;
           return (
