@@ -35,7 +35,7 @@ const Ratefacts = () => {
   };
 
   return (
-    <div className="w-full h-screen  px-10 py-2 pb-10 bg-blue-100" id='ratefacts'overflow-hidden>
+    <div className="w-full h-screen  px-10 py-2 pb-13 bg-blue-100" id='ratefacts'overflow-hidden>
       <h2 className="text-4xl font-bold text-center  wrap-word pt-17">Frequently Asked Questions</h2>
       <div className="space-y-8 pt-15 md:pt-20 max-w-3xl mx-auto">
         {faqs.map((faq, index) => {
