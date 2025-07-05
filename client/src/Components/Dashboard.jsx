@@ -142,7 +142,7 @@ const Dashboard = () => {
             <span>Wednesday: 9:00 AM - 6:00 PM</span>
 
           </div>
-          <div className='p-10'><Contact /></div>
+          <div className='p-15'><Contact /></div>
         </div>
 
       </main>
